@@ -32,6 +32,7 @@ Run the test project and design/implement a Product Card component that can be u
 - Clean and modern layout: Bootstrap 5, readable typography, accessible controls, contrast and hover refinements
 
 ### Deliverables / Demo
+- Live Demo: [`https://react-ecommerce-app-esqs.onrender.com/`](https://react-ecommerce-app-esqs.onrender.com/)
 - Ready for GitHub Pages / Netlify (CRA build). CodeSandbox also works.
 - Example deployment steps (Netlify):
   1) “New Site from Git” → GitHub repo: `erenkamer1/React-Ecommerce-App`
