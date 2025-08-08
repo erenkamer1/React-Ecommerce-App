@@ -16,8 +16,10 @@ const Product = () => {
 
   const dispatch = useDispatch();
 
-  const addProduct = (product) => {
-    dispatch(addCart(product));
+  const [selectedVariant, setSelectedVariant] = useState("Default");
+
+  const addProduct = (p) => {
+    dispatch(addCart({ ...p, variant: selectedVariant }));
   };
 
   useEffect(() => {
@@ -84,6 +86,18 @@ const Product = () => {
               </p>
               <h3 className="display-6  my-4">${product.price}</h3>
               <p className="lead">{product.description}</p>
+              <div className="mb-3" style={{ maxWidth: 280 }}>
+                <label className="form-label small text-muted">Variant</label>
+                <select
+                  className="form-select"
+                  value={selectedVariant}
+                  onChange={(e) => setSelectedVariant(e.target.value)}
+                >
+                  {(["Default", "Small", "Medium", "Large"]).map((v) => (
+                    <option key={`var-${v}`} value={v}>{v}</option>
+                  ))}
+                </select>
+              </div>
               <button
                 className="btn btn-outline-dark"
                 onClick={() => addProduct(product)}
