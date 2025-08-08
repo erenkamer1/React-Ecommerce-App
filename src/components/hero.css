@@ -1,0 +1,48 @@
+.hero-img {
+  max-height: 520px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+@media (max-width: 576px) {
+  .hero-img {
+    max-height: 380px;
+  }
+}
+
+/* Hover effects */
+.hero-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+}
+.hero-card:hover .hero-img {
+  filter: brightness(0.95);
+}
+.hero-card:hover .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+
